@@ -2,7 +2,6 @@ package com.wedding.entity;
 
 import javax.persistence.*;
 
-//
 @Entity
 @Table(name = "user_roles", schema = "wedding")
 public class Role {
