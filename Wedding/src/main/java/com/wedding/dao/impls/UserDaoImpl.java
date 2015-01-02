@@ -61,9 +61,12 @@ public class UserDaoImpl extends BaseDaoImpl implements UserDao {
     public List<User> findByRole(Role role) {
         List<User> users;
         if (role.getId() != null) {
-            users = session.createQuery("FROM User u JOIN Role r ON u.role.id = r.id").list();
+            users = session.createQuery("FROM User u JOIN Role r ON u.role.id = :id")
+                    .setParameter("id", role.getId()).list();
         } else if (role.getRoleName() != null) {
-            users = session.createQuery("FROM User u JOIN Role r ON u.role.roleName = r.roleName").list();
+            users = session.createQuery("FROM User u JOIN Role r ON u.role.roleName = r.roleName " +
+                    "WHERE r.roleName = :roleName")
+                    .setParameter("roleName", role.getRoleName()).list();
         } else {
             users = null;
         }

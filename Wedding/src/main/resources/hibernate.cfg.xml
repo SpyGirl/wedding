@@ -11,5 +11,7 @@
 		<property name="hibernate.current_session_context_class">thread</property>
 		<mapping class="com.wedding.entity.User" />
 		<mapping class="com.wedding.entity.Role" />
+		<mapping class="com.wedding.entity.Guest" />
+		<mapping class="com.wedding.entity.GuestRole" />
 	</session-factory>
 </hibernate-configuration>
