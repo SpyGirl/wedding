@@ -19,10 +19,6 @@ public class HibernateUtil {
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
     }
 
-    private static SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
     public static Session getSession() {
         if (session == null) {
             session = sessionFactory.openSession();

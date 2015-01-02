@@ -1,4 +1,7 @@
 package com.wedding.dao.impls;
 
-public class UserDaoImpl extends BaseDaoImpl {
+import com.wedding.dao.UserDao;
+
+public class UserDaoImpl extends BaseDaoImpl implements UserDao {
+
 }

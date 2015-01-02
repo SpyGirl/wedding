@@ -9,7 +9,7 @@ import java.util.List;
 public class BaseDaoImpl implements BaseDao {
 
 
-    private Session session;
+    protected Session session;
 
     public BaseDaoImpl() {
         session = HibernateUtil.getSession();
